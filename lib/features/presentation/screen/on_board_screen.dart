@@ -24,22 +24,26 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
     'assets/images/Layer 4.png'];
 
   Widget nextButton() {
-    return ElevatedButton(
-      child: const Text('Next'),
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0),
-            side: const BorderSide(color: Colors.black12),
+    return SizedBox(
+      width: 81.w,
+      height: 48.h,
+      child: ElevatedButton(
+        child: const Text('Next'),
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+              side: const BorderSide(color: Colors.black12),
+          ),
+          primary: Colors.black, // Background color
         ),
-        primary: Colors.black, // Background color
+        onPressed: () {
+          if (activeStep < dotCount - 1) {
+            setState(() {
+              activeStep++;
+            });
+          }
+        },
       ),
-      onPressed: () {
-        if (activeStep < dotCount - 1) {
-          setState(() {
-            activeStep++;
-          });
-        }
-      },
     );
   }
 
