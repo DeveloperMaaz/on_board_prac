@@ -64,7 +64,7 @@ class Text3 extends StatelessWidget {
         ),
         Text('Can’t find what you’re looking for? Speak to your personal concierge and leave the heavy lifting to us.',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 14.sp),),
+          style: TextStyle(fontSize: 14.sp,color: const Color.fromRGBO(28, 28, 28, 1)),),
 
 
       ],
@@ -87,7 +87,7 @@ class Text4 extends StatelessWidget {
 
         Text('With just a few simple taps, we will accomplish any tasks for you. No task too big, no task too difficult',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 14.sp),),
+          style: TextStyle(fontSize: 14.sp,color: const Color.fromRGBO(28, 28, 28, 1)),),
       ],
     );
   }

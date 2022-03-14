@@ -47,7 +47,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
     );
   }
 
-   final List<Widget> widgetList=[Text1(),Text2(),Text3(),Text4()];
+   final List<Widget> widgetList=[const Text1(),Text2(),Text3(),Text4()];
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -62,7 +62,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                width: 280.w,
                height: 272.h,
                child: Image(image: AssetImage(images[activeStep]),
-                 fit: BoxFit.cover,
+                 fit: BoxFit.contain,
                ),
              ),
            ),
@@ -70,8 +70,8 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
           DotStepper(
             dotCount: dotCount,
               activeStep:activeStep,
-            shape: Shape.stadium,
-            dotRadius: 8,
+            shape: Shape.circle,
+            dotRadius: 6,
             onDotTapped: (dotIndex) {
               setState(() {
                 activeStep = dotIndex;
